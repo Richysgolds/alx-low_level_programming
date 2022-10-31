@@ -1,20 +1,25 @@
 #include "main.h"
 
 /**
- * _memset - A function that locates a
- * character in a string
- * @s: memory space to be filled
- * @b: byte to fill with
- * @n: number of spaces to fill
- * Return: pointer to memory area s
- */
-char *_memset(char *s, char b, unsigned int n)
-{
-unsigned int i;
+ * _strchr - A function that locates a vlue
+ * @s: pointer to char
+ * @c: char params to found
+ * Return: Pointer to a memory area s
+*/
 
-for (i = 0; i < n; i++)
+char *_strchr(char *s, char c)
 {
-*(s + i) = b;
-}
-return (s);
+	while (*s != '\0')
+	{
+		if (*s == c)
+		{
+			return (s);
+		}
+		s++;
+	}
+	if (*s == c)
+	{
+		return (s);
+	}
+return (0);
 }
